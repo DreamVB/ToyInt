@@ -1,0 +1,6 @@
+; Example script
+
+10 20 Print 32 CHAR Print PrintLn
+"$After swap " PrintLn
+10 20 Swap Print 32 CHAR Print PrintLn
+exit

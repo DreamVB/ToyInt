@@ -1,0 +1,17 @@
+; call example
+
+Jmp __main
+
+Proc1:
+  "$Hello from procedure 1" PrintLn
+Ret
+
+Proc2:
+  "$Hello from procedure 2" PrintLn
+Ret
+
+__main:
+ call Proc1
+ call Proc2
+ "$Back in main" PrintLn
+Exit

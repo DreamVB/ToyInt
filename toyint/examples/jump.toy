@@ -1,0 +1,14 @@
+; simple jump
+
+Jmp _main
+
+"$This will not print" PrintLn
+
+_main:
+ "$Hello World" PrintLn
+  jmp _end
+  "$This will also not print but below will" PrintLn
+
+_end:
+ "$The End" PrintLn
+ Exit

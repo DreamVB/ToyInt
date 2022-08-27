@@ -1,0 +1,11 @@
+; Ramdom numnber example
+
+100 !num
+
+&num Rnd Println
+&num Rnd Println
+&num Rnd Println
+&num Rnd Println
+&num Rnd Println
+&num Rnd Println
+Exit

@@ -1,0 +1,11 @@
+; simple loop count 10 to 1
+
+1 !num
+10 !count
+
+loop:
+  &count PrintLn
+  &count 1 - !count
+  &count &num >=
+  jnz loop
+ Exit

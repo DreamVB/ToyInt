@@ -1,0 +1,5 @@
+; Return the code of a char
+
+'A' ASC PrintLn
+
+Exit

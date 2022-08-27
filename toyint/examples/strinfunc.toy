@@ -1,0 +1,32 @@
+; example of string functions
+
+; Uppercase 	- uppercases string
+; Lowercase 	- lowercases string
+; Left 		- Gets the left side of a string by index
+; Right 		- Gets the right side of a string by index
+; Copy 		- Copys part of a string with a start and end index
+; Length 		- returns the length of a string
+; Delete 		- Deletes part of a string
+; StrPos 		- Return the position of a sub string
+; IsAlpha		- Returns true if value on stack if alpha
+; IsDigit		- Returns true if value on stack is a digit
+; IsLower		- Returns true if the char on the stack is lowercase
+; IsUpper		- Returns true if the chat on the stack is uppercase
+
+"$hello " UpperCase Print
+"$WorLD" LowerCase PrintLn
+"$Pascal" 3 Left PrintLn
+"$Hello World" 5 Right PrintLn
+"$I Like Programming" 3 4 COPY PrintLn
+"$How long is this string" Length PrintLn
+"$Hello" 1 2 Delete PrintLn
+"$What a cool day it is" "$day" StrPos PrintLn
+'G' IsAlpha PrintLn
+'3' IsDigit PrintLn
+'-' IsAlpha PrintLn
+'d' IsDigit PrintLn
+'a' IsUpper PrintLn
+'Z' IsLower PrintLn
+'F' IsUpper PrintLn
+'b' IsLower PrintLn
+Exit

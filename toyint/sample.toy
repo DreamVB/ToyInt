@@ -1,0 +1,27 @@
+; Example script
+
+3.141 ToInt Println
+15 2 DIV println
+5 4 + println
+5 2 - println
+2 5 * println
+15 2 MOD Println
+90 3 AND Println
+90 3 or println
+2 128 xor println
+5 not println
+-6 not println
+4 2 < println
+12 2 > println
+1 2 <= Println
+3 3 >= println
+5 1 = println
+4 4 = println
+2 2 <> println
+56 41 MAX Println
+26 32 MIN PrintLn
+5 2 / println
+2.8 9.5 + ToInt Println
+1 4 shl println
+16 1 shr println
+Exit

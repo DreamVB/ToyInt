@@ -1,0 +1,13 @@
+; example vars
+
+10 !Num1
+60 !Num2
+
+&num1 PrintLn
+&num2 PrintLn
+&Num1 &Num2 + !Ret
+
+&Ret PrintLn
+
+
+Exit

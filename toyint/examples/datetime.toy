@@ -1,0 +1,8 @@
+; Example print date or time
+"$Current date and time " Print @Now PrintLn
+"$Current Time = " Print @Time PrintLn
+"$Current Date = " Print @Date PrintLn
+
+; Use @DateTimeFrmt to use a custom date and time
+"$Custom date " Print "$DDDD DD MMMM YYYY" @DateTimeFrmt PrintLn 
+Exit

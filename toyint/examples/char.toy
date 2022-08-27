@@ -1,0 +1,6 @@
+; printing out chars
+
+65 CHAR Print
+66 CHAR Print
+67 CHAR Println
+Exit

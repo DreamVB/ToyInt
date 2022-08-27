@@ -1,0 +1,7 @@
+; dup example
+
+; Will print 20
+
+10 dup + Println
+
+Exit

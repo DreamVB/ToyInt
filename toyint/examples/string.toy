@@ -1,0 +1,6 @@
+; Example of using a string and storeing into a variable then loading and printing
+; Note strings must start with $ after the first quote
+"$Hello I Like Programming!" !str
+&str PrintLn
+
+Exit

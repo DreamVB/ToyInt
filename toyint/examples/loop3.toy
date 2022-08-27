@@ -1,0 +1,10 @@
+; simple loop to print alphabet
+
+90 !num
+65 !count
+loop:
+  &count CHAR Print
+  &count 1 + !count
+  &count &num <=
+  jnz loop
+ Exit

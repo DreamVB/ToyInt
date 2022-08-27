@@ -1,0 +1,5 @@
+; Example concat two strings
+
+"$String One " "$String Two" & Println
+
+Exit

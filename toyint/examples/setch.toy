@@ -1,0 +1,14 @@
+; Set char at index example
+
+"$Hello!" !Str
+
+"$Original string " Print
+&str PrintLn
+
+"$Updated string after changeing first and last letters: " Print
+&str 1 'W' setch !str
+&str 6 '+' setch !str
+&str println
+
+
+exit

@@ -1,0 +1,15 @@
+; Get char at index example
+0 !len
+
+"$This is a test string" !Str
+
+"$First letter is : " Print
+&Str 1 GetCh !ch
+&ch PrintLn
+
+&str Length !len
+"$Last letter is  : " Print
+&str &len GetCh !ch
+&ch PrintLn
+
+exit

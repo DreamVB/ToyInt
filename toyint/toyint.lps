@@ -9,129 +9,42 @@
         <Filename Value="toyint.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="37"/>
-        <CursorPos X="19" Y="46"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="491"/>
+        <CursorPos X="35" Y="782"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="units\clables.pas"/>
-        <UnitName Value="cLables"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="60"/>
-        <CursorPos Y="89"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="units\cstack.pas"/>
-        <UnitName Value="cStack"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="units\cvars.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="cVars"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="97"/>
-        <CursorPos X="5" Y="130"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="units\clables.pas"/>
+        <UnitName Value="cLables"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="7"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="units\cstack.pas"/>
+        <UnitName Value="cStack"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\objpas.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="26"/>
         <CursorPos X="8" Y="35"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="369" Column="29" TopLine="358"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="370" Column="56" TopLine="361"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="376" Column="40" TopLine="367"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="382" Column="40" TopLine="373"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="387" Column="43" TopLine="378"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="426" Column="54" TopLine="417"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="432" Column="53" TopLine="423"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="438" Column="54" TopLine="429"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="506" Column="45" TopLine="491"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="513" Column="55" TopLine="504"/>
-      </Position>
-      <Position>
-        <Filename Value="units\clables.pas"/>
-        <Caret Line="89" TopLine="62"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="364" Column="53" TopLine="357"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="424" Column="40" TopLine="398"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="585" Column="13" TopLine="568"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="587" Column="51" TopLine="573"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="73" Column="5" TopLine="55"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="646" Column="58" TopLine="616"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="387" Column="9" TopLine="375"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="648" Column="30" TopLine="638"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="647" Column="32" TopLine="638"/>
-      </Position>
-      <Position>
-        <Filename Value="toyint.lpr"/>
-        <Caret Line="648" Column="38" TopLine="639"/>
-      </Position>
       <Position>
         <Filename Value="toyint.lpr"/>
         <Caret Line="647" Column="32" TopLine="638"/>
@@ -162,11 +75,91 @@
       </Position>
       <Position>
         <Filename Value="toyint.lpr"/>
-        <Caret Line="63" Column="48" TopLine="823"/>
+        <Caret Line="837" Column="3" TopLine="829"/>
       </Position>
       <Position>
         <Filename Value="toyint.lpr"/>
-        <Caret Line="837" Column="3" TopLine="829"/>
+        <Caret Line="713" Column="24" TopLine="691"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="712" Column="18" TopLine="703"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="715" Column="43" TopLine="712"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="20" Column="75"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="776" Column="54" TopLine="760"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="775" Column="37" TopLine="773"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="776" TopLine="767"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="891" Column="9" TopLine="742"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="823" Column="56" TopLine="814"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="828" Column="23" TopLine="819"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="480" Column="5" TopLine="480"/>
+      </Position>
+      <Position>
+        <Filename Value="units\clables.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="50" Column="5" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="units\clables.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="69" Column="9" TopLine="58"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="67" Column="11" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="42" Column="36" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="494" Column="36" TopLine="480"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+        <Caret Line="497" Column="9" TopLine="493"/>
+      </Position>
+      <Position>
+        <Filename Value="toyint.lpr"/>
+      </Position>
+      <Position>
+        <Filename Value="units\cvars.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="units\clables.pas"/>
+        <Caret TopLine="62"/>
       </Position>
     </JumpHistory>
     <RunParams>

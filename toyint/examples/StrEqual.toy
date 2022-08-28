@@ -1,0 +1,5 @@
+; check if both strings are equal
+
+"$hello" "$hello" StrEqual PrintLn
+"$hello" "$Hello" StrEqual PrintLn
+Exit

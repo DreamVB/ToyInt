@@ -1,0 +1,16 @@
+
+Jmp __main
+
+sub1:
+  "$Hello from sub 1" PrintLn
+  call sub2
+ret
+
+sub2:
+  "$I am called from sub 1" PrintLn
+ret
+
+__main:
+ call Sub1
+ "$The end" PrintLn
+Exit

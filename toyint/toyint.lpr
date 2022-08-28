@@ -5,7 +5,7 @@ program toyint;
 uses
  {$IFDEF UNIX}
   cthreads,
-                  {$ENDIF}
+                        {$ENDIF}
   Classes,
   cLables,
   cStack,
@@ -17,9 +17,10 @@ type
     wAnd, wOr, wXor, wNot, wLT, wGT, wLeq, wGeq, wEq, wNeq,
     wJmp, wJnz, wJz, wUpperCase, wAsc, wLeft, wRight, wConcat,
     wCopy, wLen, wDelete, wSubPos, wLowerCase, wDup, wDrop, wPrint,
-    wRead, wPrintLN, wChar, wIsAlpha, wIsDigit, wIsUpper, wIsLower,
+    wRead, wPrintLN, wChar, wGetCh, wSetCh, wIsAlpha, wIsAlphaNum, wIsWhite,
+    wIsDigit, wIsUpper, wIsLower, wStrEq,
     wNow, wDate, wCustomDateTime, wMax, wMin,
-    wSwap, wShl, wShr, wRnd, wToINT, wTime, wCall, wRet,
+    wSwap, wShl, wShr, wRnd, wInc1, wDec1, wToINT, wTime, wCall, wRet,
     wExit, wLineBreak, wError);
 
 var
@@ -38,7 +39,7 @@ const
   MAX_STACK_SIZE = 256;
 
 
-  procedure Abort(code: integer; Msg: string);
+  procedure Abort(code: integer = 4; Msg: string = '');
   begin
 
     IsRunning := False;
@@ -62,6 +63,10 @@ const
       3:
       begin
         writeln('Label Already Found, ' + Msg);
+      end;
+      else
+      begin
+        writeln('Unknown Error');
       end;
     end;
 
@@ -115,6 +120,12 @@ const
   begin
 
     isGood := True;
+
+    if S = '--' then
+    begin
+      Result := False;
+      Exit;
+    end;
 
     for I := 1 to Length(S) do
     begin
@@ -336,6 +347,14 @@ const
     begin
       Result := Ord(wChar);
     end
+    else if S = 'GETCH' then
+    begin
+      Result := Ord(wGetCh);
+    end
+    else if S = 'SETCH' then
+    begin
+      Result := Ord(wSetCh);
+    end
     else if S = 'ISALPHA' then
     begin
       Result := Ord(wIsAlpha);
@@ -344,6 +363,14 @@ const
     begin
       Result := Ord(wIsDigit);
     end
+    else if S = 'ISALPHANUM' then
+    begin
+      Result := Ord(wIsAlphaNum);
+    end
+    else if S = 'ISWHITE' then
+    begin
+      Result := Ord(wIsWhite);
+    end
     else if S = 'ISUPPER' then
     begin
       Result := Ord(wIsUpper);
@@ -351,6 +378,10 @@ const
     else if S = 'ISLOWER' then
     begin
       Result := Ord(wIsLower);
+    end
+    else if S = 'STREQUAL' then
+    begin
+      Result := Ord(wStrEq);
     end
     else if S = 'PRINT' then
     begin
@@ -407,6 +438,14 @@ const
     else if S = 'RND' then
     begin
       Result := Ord(wRnd);
+    end
+    else if S = '++' then
+    begin
+      Result := Ord(wInc1);
+    end
+    else if S = '--' then
+    begin
+      Result := Ord(wDec1);
     end
     else if S = 'TOINT' then
     begin
@@ -527,6 +566,14 @@ const
           begin
             First := integer(stack.Pop());
             Stack.Push(Random(Trunc(First)));
+          end;
+          wInc1:
+          begin
+            stack.Push(stack.Pop() + 1);
+          end;
+          wDec1:
+          begin
+            stack.Push(stack.Pop() - 1);
           end;
           wJmp:
           begin
@@ -695,6 +742,23 @@ const
           begin
             stack.Push(chr(stack.Pop()));
           end;
+          wGetCh:
+          begin
+            First := stack.Pop();
+            sTemp := stack.Pop();
+            if First <= 0 then First := 1;
+            stack.Push(sTemp[trunc(First)]);
+          end;
+          wSetCh:
+          begin
+            ch := stack.Pop();
+            First := stack.Pop();
+            sTemp := stack.Pop();
+            if First <= 0 then First := 1;
+
+            sTemp[Trunc(First)] := ch;
+            stack.Push(sTemp);
+          end;
           wIsAlpha:
           begin
             ch := char(stack.Pop());
@@ -705,6 +769,16 @@ const
             ch := char(stack.Pop());
             stack.Push(BoolToInt(ch in ['0'..'9']));
           end;
+          wIsAlphaNum:
+          begin
+            ch := char(stack.Pop());
+            stack.Push(BoolToInt(ch in ['A'..'Z', 'a'..'z', '0'..'9']));
+          end;
+          wIsWhite:
+          begin
+            ch := char(stack.Pop());
+            stack.Push(BooltoInt((ch = #9) or (ch = #10) or (ch = #13) or (ch = #32)));
+          end;
           wIsUpper:
           begin
             ch := char(stack.Pop());
@@ -714,6 +788,10 @@ const
           begin
             ch := char(stack.Pop());
             stack.Push(BoolToInt(ch in ['a'..'z']));
+          end;
+          wStrEq:
+          begin
+            stack.Push(BoolToInt(stack.Pop() = stack.Pop()));
           end;
           wPrint:
           begin
@@ -815,6 +893,12 @@ const
       end;
       Inc(IP);
     end;
+    //Clear up time
+    vName := '';
+    sTemp := '';
+    sTemp1 := '';
+    lLable := '';
+    sRead := '';
   end;
 
   procedure ClearUp;
@@ -860,5 +944,9 @@ begin
         ClearUp;
       end;
     end;
+  end
+  else
+  begin
+    Abort(0,'The syntax of the command is incorrect.');
   end;
 end.

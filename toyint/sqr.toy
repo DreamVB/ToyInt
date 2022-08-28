@@ -8,7 +8,7 @@ loop:
   &count Print
   &count dup * !sqr
   "$ = " Print &sqr PrintLn
-  &count 1 + !count
+  &count ++ !count
   &count &num <=
   jnz loop
  Exit

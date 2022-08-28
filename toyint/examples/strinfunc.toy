@@ -10,8 +10,10 @@
 ; StrPos 		- Return the position of a sub string
 ; IsAlpha		- Returns true if value on stack if alpha
 ; IsDigit		- Returns true if value on stack is a digit
+; IsAlphaNum	- Returns true if value on stack is alpha or digit
 ; IsLower		- Returns true if the char on the stack is lowercase
 ; IsUpper		- Returns true if the chat on the stack is uppercase
+; IsWhite		- Returns true of value on stack if white space, eg Tab space cr lf
 
 "$hello " UpperCase Print
 "$WorLD" LowerCase PrintLn
@@ -25,8 +27,14 @@
 '3' IsDigit PrintLn
 '-' IsAlpha PrintLn
 'd' IsDigit PrintLn
+'a' IsAlphaNum PrintLn
+']' IsAlphaNum PrintLn
+'9' IsAlphaNum PrintLn
 'a' IsUpper PrintLn
 'Z' IsLower PrintLn
 'F' IsUpper PrintLn
 'b' IsLower PrintLn
+32 CHAR IsWhite PrintLn
+'	' IsWhite PrintLn
+'a' IsWhite PrintLn
 Exit

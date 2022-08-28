@@ -24,4 +24,6 @@
 2.8 9.5 + ToInt Println
 1 4 shl println
 16 1 shr println
+10 ++ PrintLn
+6 -- PrintLn
 Exit

@@ -1,0 +1,12 @@
+; Beep pc speacker
+
+Jmp .Main
+
+beep:
+ 7 CHAR Print
+Ret
+
+.main:
+  Call Beep
+Exit
+
